@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Area2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ground.tres" type="TileSet" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="player1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 45, 165 )
+
+[node name="Area2D" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 480, 285 )
+next_l = "res://world.tscn"
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 1, 8, 0, 5, 65544, 0, 131077, 131074, 0, 6, 131075, 0, 196610, 196608, 0, 1, 196609, 0, 65536, 196610, 0, 1, 196614, 0, 6, 196615, 0, 196610, 262144, 0, 65546, 262145, 0, 131072, 262146, 0, 65545, 262148, 0, 5, 262150, 0, 65541, 327680, 0, 131077, 327682, 0, 65542, 327683, 0, 196609, 327684, 0, 196611, 327685, 0, 196609, 327686, 0, 196611, 327687, 0, 196609, 327688, 0, 196610 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+
